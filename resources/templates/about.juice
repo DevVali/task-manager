@@ -1,0 +1,9 @@
+{ extends "layout" }
+
+{ block "header" }
+	{ text app.about-title }
+{ /block }
+
+{ block "content" }
+	<h1 class="text-2-xl font-bold">{ text app.about-title }</h1>
+{ /block }
