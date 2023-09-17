@@ -25,3 +25,9 @@
 		src: url("/fonts/Futura-Bold.otf") format("opentype");
 	}
 }
+
+@layer components {
+  .layout {
+    @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8
+  }
+}

@@ -1,7 +1,7 @@
 { extends "dash.layout" }
 
 { block "header" }
-	Welcome
+	{ text app.welcome-title }
 { /block }
 
 { block "content" }
@@ -9,7 +9,19 @@
 
 	<h2 class="mt-8 text-xl text-gray-700 uppercase font-bold">{ text app.projects-title }</h2>
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-		{ for $i = 0; $i < 10; ++$i }
+		{ for $i = 0; $i < 2; ++$i }
+			<div class="box-content -my-1 h-32 w-full overflow-hidden shadow-md rounded-xl border-none relative max-sm:first:mt-4 sm:my-1 sm:h-fit [&:has(.target:hover)>img]:scale-110">
+				<img class="transition ease-in-out delay-150 duration-300  h-full w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="">
+				<div class="target absolute top-0 px-4 py-3 bg-gray-700/50 text-gray-100 w-full">
+					<p>Lorem ipsum dolor sit amet</p>
+				</div>
+			</div>
+		{ /for }
+	</div>
+
+	<h2 class="mt-8 text-xl text-gray-700 uppercase font-bold">{ text app.views-title }</h2>
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+		{ for $i = 0; $i < 3; ++$i }
 			<div class="box-content -my-1 h-32 w-full overflow-hidden shadow-md rounded-xl border-none relative max-sm:first:mt-4 sm:my-1 sm:h-fit [&:has(.target:hover)>img]:scale-110">
 				<img class="transition ease-in-out delay-150 duration-300  h-full w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="">
 				<div class="target absolute top-0 px-4 py-3 bg-gray-700/50 text-gray-100 w-full">

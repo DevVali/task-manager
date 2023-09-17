@@ -10,7 +10,7 @@
 </head>
 <body>
 	<nav class="bg-slate-50 border-b">
-		<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+		<div class="layout">
 			<div class="relative flex h-16 items-center justify-between">
 				<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
 					<button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus-ring-white" id="main-menu-button" aria-controls="mobile-menu" aria-expanded="false">
@@ -66,8 +66,12 @@
 
 	</nav>
 
-	<main class="mx-auto max-w-7xl px-2 mt-10 sm:px-6 lg:px-8">
+	<main class="layout mt-10">
 		{ yield "content" }
 	</main>
+
+	<footer class="layout mt-10">
+		<p class="text-gray-700">&copy; {{ date("Y") }} DevVali &lt;ejvali&gt;. Not another boring footer. </p>
+	</footer>
 </body>
 </html>
