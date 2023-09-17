@@ -2,11 +2,23 @@
 
 return [
     "title" => "Task Manager",
-    "about-title" => "About project",
+
+    // About
+    "about-title" => "About",
 
     // Menu
     "welcome" => "Welcome",
-    "workspaces" => "Workspaces",
-    "boards" => "Boards",
+    "projects" => "Projects",
+    "views" => "Views",
+    "account" => "Account",
     "logout" => "Logout",
+
+    // Welcome
+    "welcome-title" => "Welcome",
+
+    // Projects
+    "projects-title" => "Your projects",
+
+    // Views
+    "views-title" => "Your views",
 ];

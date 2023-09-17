@@ -7,7 +7,7 @@
 { block "content" }
 	<h1 class="text-2xl">Welcome, {{ "user" }}! &#128075;</h1>
 
-	<h2 class="mt-8 text-xl text-gray-700 uppercase font-bold">Workspaces</h2>
+	<h2 class="mt-8 text-xl text-gray-700 uppercase font-bold">{ text app.projects-title }</h2>
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 		{ for $i = 0; $i < 10; ++$i }
 			<div class="box-content -my-1 h-32 w-full overflow-hidden shadow-md rounded-xl border-none relative max-sm:first:mt-4 sm:my-1 sm:h-fit [&:has(.target:hover)>img]:scale-110">
