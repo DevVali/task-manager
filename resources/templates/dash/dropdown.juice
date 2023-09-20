@@ -1,0 +1,5 @@
+{ foreach [["account"], ["logout"]] as [$item] }
+	<a href="/dash/{{ $item }}" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1">
+		{{ text("app.{$item}") }}
+	</a>
+{ /foreach }
