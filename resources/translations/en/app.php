@@ -10,6 +10,8 @@ return [
     "welcome" => "Welcome",
     "projects" => "Projects",
     "views" => "Views",
+
+    // Dropdown
     "account" => "Account",
     "logout" => "Logout",
 
