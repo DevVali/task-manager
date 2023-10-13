@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      "futura": ["Futuraa"],
+      "futura": ["Futura"],
     }
   },
   plugins: [],
