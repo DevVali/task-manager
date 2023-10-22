@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 use Lemon\Templating\Template;
 
-class Welcome
+class Home
 {
 	public function handle(): Template
 	{
-		return template("dash.welcome");
+		return template("app.home");
 	}
 }

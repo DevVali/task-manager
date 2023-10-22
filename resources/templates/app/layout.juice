@@ -10,7 +10,7 @@
 </head>
 <body>
 	<nav class="bg-neutral-900 border-b border-sky-600">
-		<div class="page-layout">
+		<div class="wrapper">
 			<div class="relative flex h-16 items-center justify-between">
 				<div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
 					<button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-neutral-400 hover:bg-neutral-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" id="main-menu-button" aria-controls="mobile-menu" aria-expanded="false">
@@ -28,7 +28,7 @@
 					</div>
 					<div class="hidden sm:ml-6 sm:block">
 						<div class="flex space-x-4">
-							{ include "dash.components.menu" }
+							{ include "app.components.menu" }
 						</div>
 					</div>
 				</div>
@@ -47,7 +47,11 @@
 						</div>
 
 						<div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="user-menu" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-							{ include "dash.components.dropdown" }
+							{ foreach [["account"], ["logout"]] as [$item] }
+								<a href="/{{ $item }}" class="block px-4 py-2 text-sm text-neutral-700" role="menuitem" tabindex="-1">
+									{{ text("app.{$item}") }}
+								</a>
+							{ /foreach }
 						</div>
 					</div>
 				</div>
@@ -56,18 +60,18 @@
 
 		<div class="sm:hidden hidden" id="mobile-menu">
 			<div class="space-y-1 px-2 pb-3 pt-2">
-				{ include "dash.components.menu" }
+				{ include "app.components.menu" }
 			</div>
 		</div>
-
+		
 	</nav>
 
-	<main class="page-layout mt-10">
+	<main class="wrapper my-8">
 		{ yield "content" }
 	</main>
 
-	<footer class="page-layout mt-10">
-		<p class="text-gray-200">&copy; {{ date("Y") }} DevVali &lt;ejvali&gt;. Not another boring footer. </p>
+	<footer class="wrapper my-8">
+		<p class="text-gray-200">&copy; {{ date("Y") }} DevVali &lt;ejvali&gt;. All Rights Reserved. </p>
 	</footer>
 </body>
 </html>

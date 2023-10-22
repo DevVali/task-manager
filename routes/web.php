@@ -1,9 +1,8 @@
 <?php
 
-use App\Controllers\Welcome;
+use App\Controllers\Home;
 use Lemon\Route;
 
-Route::get("/", [Welcome::class, "handle"]);
-Route::redirect("welcome", "/");
+Route::get("/home", [Home::class, "handle"]);
 
 Route::template("/about", "about");

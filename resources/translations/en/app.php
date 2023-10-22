@@ -7,7 +7,7 @@ return [
     "about-title" => "About",
 
     // Menu
-    "welcome" => "Welcome",
+    "home" => "Home",
     "projects" => "Projects",
     "views" => "Views",
 
@@ -15,8 +15,8 @@ return [
     "account" => "Account",
     "logout" => "Logout",
 
-    // Welcome
-    "welcome-title" => "Welcome",
+    // Home
+    "home-title" => "Home",
 
     // Projects
     "projects-title" => "Your projects",
