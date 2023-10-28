@@ -71,7 +71,7 @@
 	</main>
 
 	<footer class="wrapper my-8">
-		<p class="text-gray-200">&copy; {{ date("Y") }} DevVali &lt;ejvali&gt;. All Rights Reserved. </p>
+		<p class="text-neutral-400">&copy; {{ date("Y") }} DevVali &lt;ejvali&gt;. All Rights Reserved. </p>
 	</footer>
 </body>
 </html>

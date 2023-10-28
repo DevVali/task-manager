@@ -7,27 +7,17 @@
 { block "content" }
 	<h1 class="text-2xl">Welcome, {{ "Jace Norman" }}! &#128075;</h1>
 
-	<h2 class="mt-8 text-xl text-gray-200 uppercase font-bold">{ text app.projects-title }</h2>
-	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-		{ for $i = 0; $i < 3; ++$i }
-			<div class="box-content -my-1 h-32 w-full overflow-hidden shadow-md rounded-xl border-none relative max-sm:first:mt-4 sm:my-1 sm:h-fit [&:has(.target:hover)>img]:scale-110">
-				<img class="transition ease-in-out delay-150 duration-300  h-full w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="">
-				<div class="target absolute top-0 px-4 py-3 bg-gray-700/80 text-gray-200 w-full">
-					<p>Lorem ipsum dolor sit amet</p>
-				</div>
-			</div>
+	<h2 class="mt-8 text-xl text-gray-200 uppercase font-bold hover:text-neutral-400"><a href="/projects">{ text app.projects-title }</a></h2>
+	<div class="card">
+		{ for $i = 0; $i < 1; ++$i }
+			{ include "app.components.card-items" }
 		{ /for }
 	</div>
 
-	<h2 class="mt-8 text-xl text-gray-200 uppercase font-bold">{ text app.views-title }</h2>
-	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+	<h2 class="mt-8 text-xl text-gray-200 uppercase font-bold hover:text-neutral-400"><a href="/views">{ text app.views-title }</a></h2>
+	<div class="card">
 		{ for $i = 0; $i < 3; ++$i }
-			<div class="box-content -my-1 h-32 w-full overflow-hidden shadow-md rounded-xl border-none relative max-sm:first:mt-4 sm:my-1 sm:h-fit [&:has(.target:hover)>img]:scale-110">
-				<img class="transition ease-in-out delay-150 duration-300  h-full w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="">
-				<div class="target absolute top-0 px-4 py-3 bg-gray-700/80 text-gray-200 w-full">
-					<p>Lorem ipsum dolor sit amet</p>
-				</div>
-			</div>
+			{ include "app.components.card-items" }
 		{ /for }
 	</div>
 { /block }
