@@ -9,6 +9,7 @@
     font-display: swap;
     src: url("/fonts/Futura-Light.ttf") format("truetype");
 }
+
 @font-face {
     font-family: "Futura";
     font-style: normal;
@@ -16,6 +17,7 @@
     font-display: swap;
     src: url("/fonts/Futura-Medium.otf") format("opentype");
 }
+
 @font-face {
     font-family: "Futura";
     font-style: normal;
