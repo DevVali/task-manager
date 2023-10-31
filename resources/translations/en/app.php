@@ -19,6 +19,9 @@ return [
     "open" => "Open",
     "delete" => "Delete",
 
+    // Create project modal
+    "create-project-modal-title" => "Create new project",
+
     // Home
     "home-title" => "Home",
 
