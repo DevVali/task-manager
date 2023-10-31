@@ -15,6 +15,10 @@ return [
     "account" => "Account",
     "logout" => "Logout",
 
+    // Card options
+    "open" => "Open",
+    "delete" => "Delete",
+
     // Home
     "home-title" => "Home",
 

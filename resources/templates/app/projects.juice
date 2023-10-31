@@ -7,8 +7,6 @@
 { block "content" }
 	<h2 class="mt-8 text-xl text-gray-200 uppercase font-bold">{ text app.projects-title }</h2>
 	<div class="card">
-		{ for $i = 0; $i < 1; ++$i }
-			{ include "app.components.card-items" }
-		{ /for }
+		{ include "app.components.projects-items" }
 	</div>
 { /block }
