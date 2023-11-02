@@ -7,5 +7,7 @@ return [
         "pello",
         "tasky",
         "dask",
+        "deve",
+        "devi",
     ],
 ];
