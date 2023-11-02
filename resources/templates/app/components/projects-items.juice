@@ -1,21 +1,22 @@
 { for $i = 0; $i < 1; ++$i }
     <div class="box-content -my-1 h-32 w-full overflow-hidden shadow-md rounded-xl border-none relative max-sm:first:mt-4 sm:my-1 sm:h-fit [&:has(.target:hover)>img]:scale-110">
-        <img class="transition ease-in-out delay-150 duration-300 h-full w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="">
+        <img class="transition ease-in-out delay-150 duration-700 h-full w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="">
 
-        <div class="target transition-[height] ease-in-out delay-150 duration-300 absolute top-0 bg-gray-700/80 text-gray-200 h-12 w-full hover:h-full">
+        <div class="target transition-[height] ease-in-out delay-150 duration-700 overflow-hidden absolute top-0 bg-gray-700/80 text-gray-200 h-12 w-full hover:h-full">
             <div class="absolute top-0 left-0 px-4 py-3">
-                <a href="#">Lorem ipsum dolor sit amet</a>
+                <a href="#" class="block h-10">Lorem ipsum dolor sit amet</a>
+                <p class="text-neutral-400 line-clamp-2 sm:line-clamp-5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.</p>
             </div>
             
             <div class="absolute top-0 right-0 px-4 py-3">
                 <div class="relative ml-3">
                     <div>
-                        <button type="button" id="projects-options-button-{{$i}}" aria-expanded="false" aria-haspopup="true">
+                        <button type="button" id="projects-options-button-{{$i}}" class="relative text-neutral-400 hover:text-white focus:outline-none" aria-expanded="false" aria-haspopup="true">
                             <i class="bi bi-three-dots-vertical"></i>
                         </button>
                     </div>
 
-                    <div class="projects-options absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="projects-options-{{$i}}" role="menu" aria-orientation="vertical" aria-labelledby="projects-options-button-{{$i}}" tabindex="-1">
+                    <div class="card-options absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" id="projects-options-{{$i}}" role="menu" aria-orientation="vertical" aria-labelledby="projects-options-button-{{$i}}" tabindex="-1">
                         { foreach [["open"], ["delete"]] as [$item] }
                             <a href="#" class="block px-4 py-2 text-sm text-neutral-700" role="menuitem" tabindex="-1">
                                 {{ text("app.{$item}") }}

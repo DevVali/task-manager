@@ -24,6 +24,7 @@ return [
 
     // Home
     "home-title" => "Home",
+    "home-heading" => "Welcome",
 
     // Projects
     "projects-title" => "Your projects",
