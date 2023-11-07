@@ -1,0 +1,35 @@
+<div class="relative z-10" aria-labelledby="modal-create-project" aria-modal="true">
+    <div class="fixed inset-0 bg-neutral-950 bg-opacity-75 transition-opacity"></div>
+    <div class="fixed flex flex-col justify-end sm:justify-center mx-auto inset-0 z-10 h-screen sm:max-h-full w-screen sm:max-w-xl py-auto">
+        <div class="flex flex-col p-4 m-2 sm:m-0 overflow-y-auto bg-neutral-800 rounded-xl">
+            <div class="flex mb-4">
+                <h3 class="text-center text-3xl my-auto mr-auto font-bold">Create a project</h3>
+                <svg class="fill-neutral-600 transition-colors hover:fill-neutral-500 my-auto self-end" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </div>
+            
+            <label class="text-2xl mb-2" for="project-image">Project Image</label>
+            <ul class="grid grid-cols-4 mb-4 gap-2 ">
+                <li>
+                    <button><img class="rounded-md" draggable="false" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="car"></button>
+                </li>
+                <li>
+                    <button><img class="rounded-md" draggable="false" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="car"></button>
+                </li>
+                <li>
+                    <button><img class="rounded-md" draggable="false" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="car"></button>
+                </li>
+                <li>
+                    <button><img class="rounded-md" draggable="false" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="car"></button>
+                </li>
+                <li class="cursor-pointer col-span-4 bg-neutral-700 rounded-md p-2 text-center shadow-md hover:bg-neutral-600 transition-colors">More</li>
+            </ul>
+            <label class="text-2xl mb-2 for="project-name">Project name</label>
+            <input required class="bg-neutral-900 placeholder:text-neutral-600 p-2 mb-4 rounded-md border border-neutral-600" type="text" name="project-name" placeholder="Name">
+            <label class="text-2xl mb-2 for="project-description">Project Description</label>
+            <textarea class="bg-neutral-900 placeholder:text-neutral-600 p-2 mb-4 rounded-md border resize-none border-neutral-600 min-h-max" rows="7" placeholder="Description" maxlength="300"></textarea>
+            <input class="bg-gray-600 cursor-pointer transition-colors hover:bg-gray-500 p-2 shadow-md rounded-md" type="submit" value="Create">
+        </div>
+    </div>
+</div>
