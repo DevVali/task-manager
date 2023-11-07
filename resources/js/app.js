@@ -1,10 +1,12 @@
-const menuClosed = document.getElementById("menu-closed").classList;
-const menuOpen = document.getElementById("menu-open").classList;
-const userMenu = document.getElementById("user-menu").classList;
-const mobileMenu = document.getElementById("mobile-menu").classList;
+const menuClosed = document.querySelector("#menu-closed").classList;
+const menuOpen = document.querySelector("#menu-open").classList;
+const userMenu = document.querySelector("#user-menu").classList;
+const mobileMenu = document.querySelector("#mobile-menu").classList;
 
 let isProfileDropdownVisible = false;
 let isMobileMenuVisible = false;
+let isOptionsMenuVisible = false;
+let lastOptionsMenu;
 
 function toggleProfileDropdown() {
 	isProfileDropdownVisible = !isProfileDropdownVisible;
@@ -28,7 +30,7 @@ function toggleMobileMenuDropdown() {
 		menuOpen.add("hidden");
 
 		mobileMenu.remove("block");
-		mobileMenu.add("hidden")
+		mobileMenu.add("hidden");
 	} else {
 		menuClosed.remove("block");
 		menuClosed.add("hidden");
@@ -40,5 +42,30 @@ function toggleMobileMenuDropdown() {
 	}
 }
 
-document.getElementById("user-menu-button").addEventListener("click", toggleProfileDropdown);
-document.getElementById("main-menu-button").addEventListener("click", toggleMobileMenuDropdown);
+function toggleOptionsMenu(e) {
+	isOptionsMenuVisible = !isOptionsMenuVisible;
+	const targetMenu = document.querySelector(`#${e.target.parentNode.id.replace("-button", "")}`).classList;
+
+	document.querySelectorAll(".card-options.block").forEach(element => {
+		element.classList.remove("block");
+		element.classList.add("hidden");
+	});
+
+	if (lastOptionsMenu !== targetMenu) {
+		isOptionsMenuVisible = true;
+	}
+
+	if (isOptionsMenuVisible === false) {
+		targetMenu.remove("block");
+		targetMenu.add("hidden");
+	} else {
+		targetMenu.remove("hidden");
+		targetMenu.add("block");
+	}
+
+	lastOptionsMenu = targetMenu;
+}
+
+document.querySelector("#user-menu-button").addEventListener("click", toggleProfileDropdown);
+document.querySelector("#main-menu-button").addEventListener("click", toggleMobileMenuDropdown);
+document.querySelectorAll("[id*='projects-options-button-'], [id*='views-options-button-']").forEach(element => { element.addEventListener("click", toggleOptionsMenu) });
