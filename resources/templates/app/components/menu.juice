@@ -1,5 +1,5 @@
 { foreach [["home"], ["projects"], ["views"]] as [$item] }
-	<a href="/{{ $item }}" class="{{ explode(".", $_name)[1] === $item ? "bg-neutral-800 text-white" : "text-neutral-300 hover:bg-neutral-700 hover:text-white" }} block rounded-md px-3 py-2 text-base font-medium">
+	<a href="/{{ $item }}" class="{{ explode('.', $_name)[1] === $item ? 'bg-neutral-800 text-white' : 'text-neutral-300 hover:bg-neutral-700 hover:text-white' }} block rounded-md px-3 py-2 text-base font-medium">
 		{{ text("app.{$item}") }}
 	</a>
 { /foreach }
