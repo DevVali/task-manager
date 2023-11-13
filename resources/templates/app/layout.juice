@@ -35,7 +35,7 @@
 					</div>
 				</div>
 				<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-					<button type="button" class="relative rounded-full bg-neutral-800 p-1 text-neutral-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-neutral-800">
+					<button type="button" class="relative rounded-full bg-neutral-800 p-1 text-neutral-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-neutral-800" id="open-create-project-modal">
 						<i class="bi bi-plus-circle h-6 w-6 block" title="{ text app.create-project-modal-title }" aria-hidden="true"></i>
 					</button>
 
@@ -66,12 +66,19 @@
 		
 	</nav>
 
+	<div class="relative z-20 hidden" id="create-project-modal" aria-modal="true">
+		{ include "app.components.create-project-modal" }
+
+	</div>
+
 	<main class="wrapper my-8">
 		{ yield "content" }
+
 	</main>
 
 	<footer class="wrapper my-8">
 		<p class="text-neutral-400">&copy; {{ date("Y") }} DevVali &lt;ejvali&gt;. All Rights Reserved. </p>
+		
 	</footer>
 </body>
 </html>

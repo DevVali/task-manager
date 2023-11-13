@@ -1,35 +1,37 @@
-<div class="relative z-10" aria-labelledby="modal-create-project" aria-modal="true">
-    <div class="fixed inset-0 bg-neutral-950 bg-opacity-75 transition-opacity"></div>
-    <div class="fixed flex flex-col justify-end sm:justify-center mx-auto inset-0 z-10 h-screen sm:max-h-full w-screen sm:max-w-xl py-auto">
-        <div class="flex flex-col p-4 m-2 sm:m-0 overflow-y-auto bg-neutral-800 rounded-xl">
-            <div class="flex mb-4">
-                <h3 class="text-center text-3xl my-auto mr-auto font-bold">Create a project</h3>
-                <svg class="fill-neutral-600 transition-colors hover:fill-neutral-500 my-auto self-end" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                </svg>
-            </div>
-            
-            <label class="text-2xl mb-2" for="project-image">Project Image</label>
-            <ul class="grid grid-cols-4 mb-4 gap-2 ">
-                <li>
-                    <button><img class="rounded-md" draggable="false" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="car"></button>
-                </li>
-                <li>
-                    <button><img class="rounded-md" draggable="false" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="car"></button>
-                </li>
-                <li>
-                    <button><img class="rounded-md" draggable="false" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="car"></button>
-                </li>
-                <li>
-                    <button><img class="rounded-md" draggable="false" src="https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80" alt="car"></button>
-                </li>
-                <li class="cursor-pointer col-span-4 bg-neutral-700 rounded-md p-2 text-center shadow-md hover:bg-neutral-600 transition-colors">More</li>
-            </ul>
-            <label class="text-2xl mb-2 for="project-name">Project name</label>
-            <input required class="bg-neutral-900 placeholder:text-neutral-600 p-2 mb-4 rounded-md border border-neutral-600" type="text" name="project-name" placeholder="Name">
-            <label class="text-2xl mb-2 for="project-description">Project Description</label>
-            <textarea class="bg-neutral-900 placeholder:text-neutral-600 p-2 mb-4 rounded-md border resize-none border-neutral-600 min-h-max" rows="7" placeholder="Description" maxlength="300"></textarea>
-            <input class="bg-gray-600 cursor-pointer transition-colors hover:bg-gray-500 p-2 shadow-md rounded-md" type="submit" value="Create">
+<div class="transition-opacity fixed inset-0 bg-neutral-950 bg-opacity-75"></div>
+<div class="fixed flex flex-col justify-end mx-auto inset-0 z-20 h-screen w-screen py-auto sm:justify-center sm:max-h-full sm:max-w-xl">
+    <div class="flex flex-col p-4 m-2 overflow-y-auto bg-neutral-800 rounded-xl sm:m-0">
+        <div class="flex mb-4">
+            <h3 class="text-center text-3xl my-auto mr-auto font-bold">{ text "app.create-project-modal-title" }</h3>
+            <button type="button" class="transition-colors text-neutral-400 text-3xl my-auto self-end relative hover:text-white focus:outline-none" id="close-create-project-modal">
+                <i class="bi bi-x"></i>
+            </button>
         </div>
+            
+        <span class="block text-2xl font-medium mb-2">{ text "app.create-project-modal-image" }</span>
+        <ul class="grid grid-cols-2 gap-4 mb-4 min-[375px]:grid-cols-3 min-[475px]:grid-cols-4">
+            { foreach [["https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80"], ["https://images.unsplash.com/photo-1682687220923-c58b9a4592ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80"]] as $key => [$image] }
+                <li>
+                    <button type="button" class="{{ $key === 0 ? 'ring ring-sky-600 ' : '' }}overflow-hidden rounded-md relative hover:ring hover:ring-sky-600" id="project-image-button-{{ $image }}" value="{{ $image }}">
+                        <img class="h-full w-full object-cover rounded-md" draggable="false" src="{{ $image }}" alt="">
+                    </button>
+                </li>
+            { /foreach }
+        </ul>
+        <form>
+            <select class="hidden" name="project-image">
+                { foreach [["https://images.unsplash.com/photo-1565617882126-62ce73b04df0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80"], ["https://images.unsplash.com/photo-1682687220923-c58b9a4592ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=640&h=466&q=80"]] as [$image] }
+                    <option value="{{ $image }}"></option>
+                { /foreach }	
+            </select>
+
+            <label class="block text-2xl font-medium mb-2 text-white" for="project-name">{ text "app.create-project-modal-name" }</label>
+            <input type="text" class="block w-full rounded-md border border-neutral-600 p-2 mb-4 text-white bg-neutral-900 shadow-sm placeholder:text-neutral-600 sm:text-sm" id="project-name" name="project-name" placeholder="{ text 'app.create-project-modal-name' }" maxlength="50" required>
+
+            <label class="block text-2xl font-medium mb-2 text-white" for="project-description">{ text "app.create-project-modal-description" }</label>
+            <textarea rows="5" class="block w-full rounded-md border border-neutral-600 p-2 mb-4 text-white bg-neutral-900 shadow-sm placeholder:text-neutral-600 sm:text-sm" id="project-description" name="project-description" placeholder="{ text 'app.create-project-modal-description' }" maxlength="300"></textarea>
+
+            <button type="submit" class="block w-full rounded-md bg-gray-700 px-3 py-2 text-base font-medium text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700">Create</button>
+        </form>
     </div>
 </div>

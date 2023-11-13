@@ -21,6 +21,9 @@ return [
 
     // Create project modal
     "create-project-modal-title" => "Create new project",
+    "create-project-modal-image" => "Project image",
+    "create-project-modal-name" => "Project name",
+    "create-project-modal-description" => "Project description",
 
     // Home
     "home-title" => "Home",
