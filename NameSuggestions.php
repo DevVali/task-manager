@@ -9,5 +9,6 @@ return [
         "dask",
         "deve",
         "devi",
+        "vovu"
     ],
 ];
