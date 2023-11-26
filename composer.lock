@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "039deb7d18a549b2b79301cad5e82d3c",
+    "content-hash": "205da1a538bef7256641e5dda7acaf7c",
     "packages": [
         {
             "name": "lemon_framework/lemon",
-            "version": "3.19.1",
+            "version": "3.19.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Lemon-Framework/Lemon.git",
-                "reference": "00845593c8b445cdd92f741ce89324575f2511fa"
+                "reference": "015de446b87f1bc1d5adfaa0ef851ef2503d2858"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Lemon-Framework/Lemon/zipball/00845593c8b445cdd92f741ce89324575f2511fa",
-                "reference": "00845593c8b445cdd92f741ce89324575f2511fa",
+                "url": "https://api.github.com/repos/Lemon-Framework/Lemon/zipball/015de446b87f1bc1d5adfaa0ef851ef2503d2858",
+                "reference": "015de446b87f1bc1d5adfaa0ef851ef2503d2858",
                 "shasum": ""
             },
             "require": {
@@ -54,9 +54,9 @@
             "description": "A php microframework",
             "support": {
                 "issues": "https://github.com/Lemon-Framework/Lemon/issues",
-                "source": "https://github.com/Lemon-Framework/Lemon/tree/3.19.1"
+                "source": "https://github.com/Lemon-Framework/Lemon/tree/3.19.2"
             },
-            "time": "2023-09-16T14:25:02+00:00"
+            "time": "2023-11-14T13:33:18+00:00"
         },
         {
             "name": "psr/container",
