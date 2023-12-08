@@ -10,5 +10,10 @@ return [
         "deve",
         "devi",
         "vovu"
+        "Stackit"
+        "Trackit"
+        "TrackMan"
+        "Trackship"
+        "Taskship"
     ],
 ];
