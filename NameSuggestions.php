@@ -10,6 +10,5 @@ return [
         "deve",
         "devi",
         "vovu"
-        "test"
     ],
 ];
