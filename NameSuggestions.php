@@ -9,11 +9,11 @@ return [
         "dask",
         "deve",
         "devi",
-        "vovu"
-        "Stackit"
-        "Trackit"
-        "TrackMan"
-        "Trackship"
+        "vovu",
+        "Stackit",
+        "Trackit",
+        "TrackMan",
+        "Trackship",
         "Taskship"
     ],
 ];
